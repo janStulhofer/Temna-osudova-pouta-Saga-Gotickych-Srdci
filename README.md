@@ -1,1 +1,1 @@
-# Temna-osudova-pouta-Saga-Gotickych-Srdci
+# By Šepoty Věčnosti
