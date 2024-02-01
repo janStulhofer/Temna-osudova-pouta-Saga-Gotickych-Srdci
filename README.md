@@ -1,0 +1,1 @@
+# Temna-osudova-pouta-Saga-Gotickych-Srdci
