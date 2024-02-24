@@ -12,10 +12,13 @@ func _process(delta):
 
 
 func _on_start_button_pressed():
+	Global.jmeno = "jmeno"
+	SceneTransition.change_scene("res://intro.tscn", "Dissolve")
 	pass
 	#get_tree().change_scene_to_file("pretahnout scenu hry => prvni scena")
 
 func _on_options_button_pressed():
+	print(Global.jmeno)
 	pass
 	#var options = load("scena nastaveni => zobrazovat jako popup v main menu").instance()
 	#get_tree().current_scene.add_child(options)
