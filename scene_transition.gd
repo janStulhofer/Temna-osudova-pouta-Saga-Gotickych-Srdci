@@ -2,26 +2,12 @@ extends Node
 
 var target_scene : String
 
-func _ready():
-	$Timer.wait_time = 0.5
-	$Timer.start()
-	pass
-
-
-	
-func change_scene(target_scene_name: String, animation_name: String):
-	# Uložení názvu cílové scény
+func change_scene(target_scene_name, animation_name: String, animation_name_back: String):
 	target_scene = target_scene_name
+	$Timer.start()
+	$AnimationPlayer.play("Dissolve")
 
-	# Přehrávání animace pomocí AnimationPlayer
-	$AnimationPlayer.play(animation_name)
 
-	# Přidání signálu, který zavolá funkci po skončení animace
-	
-	
-
-func hulDyk():
-	if($Timer.)
-
-func _on_Timer_timeout():
-	get_tree().change_scene(target_scene)
+func _on_timer_timeout():
+	get_tree().change_scene_to_file(target_scene)
+	$AnimationPlayer.play("Back")

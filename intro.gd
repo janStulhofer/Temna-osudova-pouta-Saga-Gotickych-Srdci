@@ -1,2 +1,12 @@
 extends Node2D
 
+func _ready():
+	Dialogic.start("res://Assets/Dialogue/Timelines/timeline1.dtl")
+	#Dialogic.VAR.jmeno
+	#if(Dialogic.timeline_ended):
+	#	print(Dialogic.VAR.jmeno)
+	Dialogic.timeline_ended.connect(ended)
+
+func ended():
+	Dialogic.timeline_ended.disconnect(ended)
+	print(Dialogic.VAR.jmeno)
