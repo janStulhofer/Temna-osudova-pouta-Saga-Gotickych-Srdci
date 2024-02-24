@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl4wloutyxe7x"]
+
+[ext_resource type="Script" path="res://bedroom.gd" id="1_8xju7"]
+[ext_resource type="Texture2D" uid="uid://1ff5ngsw7eha" path="res://Assets/Map/Home/Bedroom/bedroom.png" id="1_63rxm"]
+[ext_resource type="Texture2D" uid="uid://cu845v75xicv6" path="res://Assets/Map/Home/Bedroom/bedroom_PC.png" id="2_6exra"]
+[ext_resource type="Texture2D" uid="uid://y2ja5prcyslm" path="res://Assets/Map/Home/Bedroom/bedroom_postel.png" id="3_6evfx"]
+[ext_resource type="Texture2D" uid="uid://cbd2yqe0ginu6" path="res://Assets/Map/Home/Bedroom/bedroom_vychod.png" id="4_5usgk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b0n5x"]
+radius = 14.036
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_angom"]
+height = 33.6116
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_73w5v"]
+
+[node name="Bedroom" type="Node2D"]
+script = ExtResource("1_8xju7")
+
+[node name="bgBedroom" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_63rxm")
+
+[node name="PCOver" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_6exra")
+
+[node name="PCShadow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("2_6exra")
+
+[node name="PostelOver" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_6evfx")
+
+[node name="PostelShadow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("3_6evfx")
+
+[node name="StinVystup" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("4_5usgk")
+
+[node name="PC" type="Area2D" parent="."]
+position = Vector2(1040, 626)
+scale = Vector2(0.95745, 1.13398)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PC"]
+position = Vector2(-609, -108)
+scale = Vector2(6.225, 6.081)
+skew = 0.567232
+shape = SubResource("CircleShape2D_b0n5x")
+one_way_collision_margin = 0.0
+
+[node name="Bed" type="Area2D" parent="."]
+position = Vector2(1694, 807)
+scale = Vector2(0.95745, 1.13398)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+position = Vector2(-367.643, -1.90735e-05)
+rotation = 0.382227
+scale = Vector2(48.41, 19.715)
+skew = 0.884882
+shape = SubResource("CapsuleShape2D_angom")
+one_way_collision_margin = 0.0
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1694, 807)
+scale = Vector2(0.95745, 1.13398)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-1042.35, 259.265)
+scale = Vector2(48.41, 19.715)
+shape = SubResource("CircleShape2D_73w5v")
+one_way_collision_margin = 0.0
