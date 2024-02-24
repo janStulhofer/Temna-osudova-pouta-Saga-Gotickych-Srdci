@@ -28,8 +28,8 @@ directories/dtl_directory={
 "timeline1": "res://Assets/Dialogue/Timelines/timeline1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://ui_dialogu.tres"]
+layout/default_style="res://ui_dialogu.tres"
 variables={
 "jmeno": ""
 }
