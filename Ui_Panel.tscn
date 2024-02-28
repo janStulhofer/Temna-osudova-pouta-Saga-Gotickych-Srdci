@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmvim8o2bl0h"]
+
+[ext_resource type="Texture2D" uid="uid://d28iwbmr1yg3n" path="res://Assets/Other/User Interface/Hodiny.png" id="1_bqsmm"]
+
+[node name="UiPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 1487.0
+offset_right = 1669.03
+offset_bottom = 35.86
+scale = Vector2(2.37985, 1.61566)
+
+[node name="Hodiny" type="Sprite2D" parent="CanvasLayer/PanelContainer"]
+z_index = 1
+position = Vector2(12.6058, 15.4735)
+scale = Vector2(0.0840389, 0.123788)
+texture = ExtResource("1_bqsmm")
