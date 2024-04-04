@@ -1,11 +1,16 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
+@onready var score_label = $MarginContainer/HBoxContainer/Score
+
+var score = "Ahoj jak se máš, teď je odpolende":
+	set(new_score):
+		score = new_score
+		_update_score_label()
+		
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	_update_score_label()
+		
+		
+func _update_score_label():
+	score_label.text = str(score)
