@@ -1,34 +1,116 @@
-[gd_scene load_steps=5 format=3 uid="uid://bntwfuj13qk8y"]
+[gd_scene load_steps=15 format=3 uid="uid://bntwfuj13qk8y"]
 
 [ext_resource type="Script" path="res://Chodba.gd" id="1_k4nqo"]
-[ext_resource type="Texture2D" uid="uid://bd5eb1v14d384" path="res://Assets/Map/Home/Hallway/hallway_beta.png" id="2_fhr82"]
+[ext_resource type="Texture2D" uid="uid://boc70uiqs5j3i" path="res://Assets/Map/Home/Hallway/hallway.png" id="2_ionti"]
+[ext_resource type="Texture2D" uid="uid://dhpfm17waym0i" path="res://Assets/Map/Home/Hallway/hallway_door2.png" id="3_5caf0"]
+[ext_resource type="Texture2D" uid="uid://bwrvgwccvan6i" path="res://Assets/Map/Home/Hallway/hallway_door2_shadow.png" id="4_e3w3x"]
+[ext_resource type="Texture2D" uid="uid://dk3f5pyubny63" path="res://Assets/Map/Home/Hallway/hallway_door3.png" id="5_fb8ej"]
+[ext_resource type="Texture2D" uid="uid://dnuppcla0uehm" path="res://Assets/Map/Home/Hallway/hallway_door3_shadow.png" id="6_g5n7b"]
+[ext_resource type="Texture2D" uid="uid://dano2mcl3c6yk" path="res://Assets/Map/Home/Hallway/hallway_door1_shadow.png" id="7_3hvyi"]
+[ext_resource type="Texture2D" uid="uid://cehni4gbujeq2" path="res://Assets/Map/Home/Hallway/hallway_door1.png" id="8_w0q61"]
+[ext_resource type="Texture2D" uid="uid://di84sx0qaxl5r" path="res://Assets/Map/Home/Hallway/hallway_plant.png" id="9_tc8fv"]
+[ext_resource type="Texture2D" uid="uid://rosf3alo2t4f" path="res://Assets/Map/Home/Hallway/hallway_plant_shadow.png" id="10_nd0bp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf8bg"]
-size = Vector2(192, 499)
+size = Vector2(147, 563.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkycb"]
-size = Vector2(792.5, 261)
+[sub_resource type="CircleShape2D" id="CircleShape2D_k30oa"]
+radius = 159.079
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id0m1"]
+size = Vector2(213.5, 375.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rq3os"]
+radius = 41.0
+height = 206.0
 
 [node name="Chodba" type="Node2D"]
 script = ExtResource("1_k4nqo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(967, 530)
-scale = Vector2(1.51719, 0.901562)
-texture = ExtResource("2_fhr82")
+position = Vector2(961.125, 543.578)
+scale = Vector2(0.998829, 0.998929)
+texture = ExtResource("2_ionti")
 
 [node name="Pokoj" type="Area2D" parent="."]
 
 [node name="dvere" type="CollisionShape2D" parent="Pokoj"]
-position = Vector2(459, 579.25)
+position = Vector2(461, 581.25)
 shape = SubResource("RectangleShape2D_cf8bg")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="door2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(960, 540)
+texture = ExtResource("3_5caf0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1044, 974)
-shape = SubResource("RectangleShape2D_pkycb")
+[node name="door2shadow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.67451)
+position = Vector2(960, 540)
+texture = ExtResource("4_e3w3x")
+
+[node name="door3" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.792157)
+z_index = 1
+position = Vector2(960, 540)
+texture = ExtResource("5_fb8ej")
+
+[node name="door3shadow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.803922)
+position = Vector2(960, 540)
+texture = ExtResource("6_g5n7b")
+
+[node name="Door3" type="Area2D" parent="."]
+
+[node name="door3a" type="CollisionShape2D" parent="Door3"]
+position = Vector2(1337, 756)
+shape = SubResource("CircleShape2D_k30oa")
+
+[node name="Door1" type="Area2D" parent="."]
+
+[node name="door111" type="CollisionShape2D" parent="Door1"]
+position = Vector2(753.25, 581.25)
+shape = SubResource("RectangleShape2D_id0m1")
+
+[node name="door1shadow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.662745)
+position = Vector2(960, 540)
+texture = ExtResource("7_3hvyi")
+
+[node name="door1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(960, 540)
+texture = ExtResource("8_w0q61")
+
+[node name="PLANTarea" type="Area2D" parent="."]
+
+[node name="plantCol" type="CollisionShape2D" parent="PLANTarea"]
+position = Vector2(1121, 685)
+shape = SubResource("CapsuleShape2D_rq3os")
+
+[node name="plant" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(960, 540)
+texture = ExtResource("9_tc8fv")
+
+[node name="plantShadow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.454902)
+position = Vector2(960, 540)
+texture = ExtResource("10_nd0bp")
 
 [connection signal="input_event" from="Pokoj" to="." method="_on_pokoj_input_event"]
 [connection signal="mouse_entered" from="Pokoj" to="." method="_on_pokoj_mouse_entered"]
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_exited" from="Pokoj" to="." method="_on_pokoj_mouse_exited"]
+[connection signal="input_event" from="Door3" to="." method="_on_door_3_input_event"]
+[connection signal="mouse_entered" from="Door3" to="." method="_on_door_3_mouse_entered"]
+[connection signal="mouse_exited" from="Door3" to="." method="_on_door_3_mouse_exited"]
+[connection signal="input_event" from="Door1" to="." method="_on_door_1_input_event"]
+[connection signal="mouse_entered" from="Door1" to="." method="_on_door_1_mouse_entered"]
+[connection signal="mouse_exited" from="Door1" to="." method="_on_door_1_mouse_exited"]
+[connection signal="input_event" from="PLANTarea" to="." method="_on_plan_tarea_input_event"]
+[connection signal="mouse_entered" from="PLANTarea" to="." method="_on_plan_tarea_mouse_entered"]
+[connection signal="mouse_exited" from="PLANTarea" to="." method="_on_plan_tarea_mouse_exited"]
