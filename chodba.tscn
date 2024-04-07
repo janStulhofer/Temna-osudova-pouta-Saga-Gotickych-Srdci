@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd3gyr3knroc0"]
+[gd_scene load_steps=5 format=3 uid="uid://bntwfuj13qk8y"]
 
 [ext_resource type="Script" path="res://Chodba.gd" id="1_k4nqo"]
-[ext_resource type="Texture2D" path="res://Assets/Map/Home/Hallway/hallway_beta.png" id="2_fhr82"]
+[ext_resource type="Texture2D" uid="uid://bd5eb1v14d384" path="res://Assets/Map/Home/Hallway/hallway_beta.png" id="2_fhr82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf8bg"]
 size = Vector2(192, 499)

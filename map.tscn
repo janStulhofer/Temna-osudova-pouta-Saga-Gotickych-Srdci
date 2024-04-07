@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b003pc2pr5ml"]
+[gd_scene load_steps=5 format=3 uid="uid://dnq7r4f5hfv02"]
 
 [ext_resource type="Script" path="res://Map.gd" id="1_rhqjx"]
-[ext_resource type="Texture2D" path="res://Assets/Map/map_beta.png" id="2_1fyju"]
+[ext_resource type="Texture2D" uid="uid://47xat3e75bmf" path="res://Assets/Map/map_beta.png" id="2_1fyju"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0rpm"]
 size = Vector2(151.841, 140.14)
@@ -23,6 +23,7 @@ scale = Vector2(3.0373, 2.5973)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dum"]
 position = Vector2(122.282, -111.267)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_h0rpm")
 
 [node name="skola" type="Area2D" parent="."]

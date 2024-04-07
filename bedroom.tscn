@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmhxauu42phol"]
+[gd_scene load_steps=8 format=3 uid="uid://bl4wloutyxe7x"]
 
 [ext_resource type="Script" path="res://bedroom.gd" id="1_8xju7"]
-[ext_resource type="Texture2D" path="res://Assets/Map/Home/Bedroom/bedroom.png" id="1_63rxm"]
-[ext_resource type="Texture2D" path="res://Assets/Map/Home/Bedroom/bedroom_PC.png" id="2_6exra"]
-[ext_resource type="Texture2D" path="res://Assets/Map/Home/Bedroom/bedroom_postel.png" id="3_6evfx"]
-[ext_resource type="Texture2D" path="res://Assets/Map/Home/Bedroom/bedroom_vychod.png" id="4_5usgk"]
-[ext_resource type="Texture2D" path="res://Assets/Map/Home/Bedroom/bedroom_PC_Shadow.png" id="4_tqhyg"]
+[ext_resource type="Texture2D" uid="uid://1ff5ngsw7eha" path="res://Assets/Map/Home/Bedroom/bedroom.png" id="1_63rxm"]
+[ext_resource type="Texture2D" uid="uid://cu845v75xicv6" path="res://Assets/Map/Home/Bedroom/bedroom_PC.png" id="2_6exra"]
+[ext_resource type="Texture2D" uid="uid://y2ja5prcyslm" path="res://Assets/Map/Home/Bedroom/bedroom_postel.png" id="3_6evfx"]
+[ext_resource type="Texture2D" uid="uid://cbd2yqe0ginu6" path="res://Assets/Map/Home/Bedroom/bedroom_vychod.png" id="4_5usgk"]
+[ext_resource type="Texture2D" uid="uid://bfdc7j1pp6arq" path="res://Assets/Map/Home/Bedroom/bedroom_PC_Shadow.png" id="4_tqhyg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_73w5v"]
 

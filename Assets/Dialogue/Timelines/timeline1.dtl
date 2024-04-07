@@ -1,0 +1,5 @@
+join  1
+Jak se jmenuješ?
+[text_input text="Jmenuji se:" var="jmeno" placeholder="Zadej svoje jméno..."]
+set 
+<Empty Text Event>
