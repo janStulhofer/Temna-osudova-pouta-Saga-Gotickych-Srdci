@@ -12,7 +12,9 @@ func _process(delta):
 
 ###STIN###
 func _on_hallway_input_event(viewport, event, shape_idx):
-	pass #dfdf
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			get_tree().change_scene_to_file("res://chodba.tscn")
 
 
 func _on_hallway_mouse_entered():
