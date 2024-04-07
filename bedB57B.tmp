@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl4wloutyxe7x"]
+
+[ext_resource type="Script" path="res://bedroom.gd" id="1_8xju7"]
+[ext_resource type="Texture2D" uid="uid://1ff5ngsw7eha" path="res://Assets/Map/Home/Bedroom/bedroom.png" id="1_63rxm"]
+[ext_resource type="Texture2D" uid="uid://cu845v75xicv6" path="res://Assets/Map/Home/Bedroom/bedroom_PC.png" id="2_6exra"]
+[ext_resource type="Texture2D" uid="uid://y2ja5prcyslm" path="res://Assets/Map/Home/Bedroom/bedroom_postel.png" id="3_6evfx"]
+[ext_resource type="Texture2D" uid="uid://cbd2yqe0ginu6" path="res://Assets/Map/Home/Bedroom/bedroom_vychod.png" id="4_5usgk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_73w5v"]
+
+[node name="Bedroom" type="Node2D"]
+script = ExtResource("1_8xju7")
+
+[node name="bgBedroom" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_63rxm")
+
+[node name="PCOver" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_6exra")
+
+[node name="PCShadow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("2_6exra")
+
+[node name="PostelOver" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_6evfx")
+
+[node name="PostelShadow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("3_6evfx")
+
+[node name="StinVystup" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("4_5usgk")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1694, 807)
+scale = Vector2(0.95745, 1.13398)
+
+[node name="kolizeOdejit" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-1028.77, 307.766)
+scale = Vector2(48.41, 19.715)
+shape = SubResource("CircleShape2D_73w5v")
+one_way_collision_margin = 0.0
+
+[node name="areaPC" type="Area2D" parent="."]
+
+[node name="kolizePC" type="CollisionPolygon2D" parent="areaPC"]
+position = Vector2(960, 540)
+polygon = PackedVector2Array(-430, -123.5, -427, -118.6, -427, -111, -413.7, -22, -416.5, -22, -471.9, 7.09998, -452, 12.5, -452, 14, -447.6, 17.3, -448.6, 20, -450.4, 20, -498.4, 50, -500.4, 50, -532.4, 35, -533.5, 35, -559.5, 48, -563.8, 48, -568, 43.8, -568, 41, -590.5, -57, -588.2, -57, -585.2, -63, -581.3, -63, -439, -124.3, -439, -126, -430, -126)
+
+[node name="areaPostel" type="Area2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="kolizePostel" type="CollisionPolygon2D" parent="areaPostel"]
+polygon = PackedVector2Array(237, 14.2, 237, 15.6, 256.4, 23, 287.2, 23, 295, 24.3, 295, 25.8, 322.5, 40, 332.8, 40, 353, 37.8, 353, 39.2, 370, 41.2, 370, 42.7, 391.5, 53, 398.1, 53, 443, 58.2, 443, 59.8, 455.5, 66, 462.1, 66, 491, 70.3, 491, 71.6, 515.4, 80, 516.3, 80, 527.3, 71, 530.1, 71, 548, 73.7, 548, 73.1, 578, 70.8, 578, 72.4, 601, 77.4, 601, 79, 608.7, 85, 629.1, 85, 692.3, 93, 694.3, 93, 700.3, 88, 705.7, 88, 727.9, 85, 755.1, 85, 805, 89.2, 805, 90.8, 811.3, 93.9, 810.6, 97, 809.1, 97, 791, 123.7, 791, 127.2, 787.4, 144.6, 807, 119, 810.7, 119, 827, 112, 827, 115.1, 863, 147.1, 863, 149.3, 888, 181.3, 888, 190, 886.7, 190, 882.7, 216, 880.8, 216, 877.5, 219.4, 875, 218.3, 875, 216, 869.5, 192, 835.4, 171, 829.8, 171, 810.6, 167, 778, 167, 758, 167.9, 731, 182.2, 731, 182.8, 707.9, 209, 705.6, 209, 690, 220, 690, 221.6, 677.9, 238.7, 709.9, 217.7, 712, 218.8, 712, 219.5, 766, 234.5, 766, 236.1, 799.4, 265.4, 798.4, 268, 796.1, 268, 763, 276.6, 763, 274.7, 714.6, 267.3, 658, 311, 658, 314, 660.5, 324.8, 707, 310.3, 707, 312.6, 760, 331.6, 760, 333.1, 804, 369.1, 804, 371.6, 809.5, 398, 806.8, 398, 788.5, 416.4, 786, 415.3, 786, 414.3, 709.1, 376.8, 662, 409, 662, 409.9, 637.8, 432, 635.3, 432, 594.3, 446, 585.9, 446, 500, 435.3, 500, 442, 498, 526, 496.7, 526, 494.7, 539, 490.7, 539, -7.09998, 405, -11.3, 405, -222.1, 351, -225.1, 351, -226.1, 371, -228, 371, -231.3, 375.4, -234, 374.4, -234, 373.3, -251.3, 366, -253.5, 366, -258, 368.2, -258, 365.1, -270, 357.1, -270, 353.9, -265.1, 350.7, -263, 351.8, -263, 352.6, -259, 354.1, -259, 348, -260.9, 320, -262, 320, -262, 315, -278, 294.7, -278, 288.3, -271, 279.3, -271, 276.7, -261.5, 245, -260, 245, -242, 220, -240.7, 220, -192.8, 177, -190.7, 177, -159.7, 154, -157.5, 154, -141, 144.9, -141, 144, -123.7, 130, -121.5, 130, -98, 118.7, -98, 118.1, -83.7, 106, -81.4, 106, -68, 99.8, -68, 99.1, -49.7, 84, -47.6, 84, -27.5, 73, -24.3, 73, -5, 66.6, -0.200012, 58, 2.20001, 58, 13.2, 48, 15.5, 48, 30.5, 40, 36.6, 40, 45, 38.3, 73.4, 19, 76.7, 19, 113.6, 3, 117.9, 3, 133, 2.09998, 133, 0.700012)
+
+[connection signal="input_event" from="Exit" to="." method="_on_exit_input_event"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="Exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="mouse_entered" from="areaPC" to="." method="_on_area_pc_mouse_entered"]
