@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bchd57jdmp17h"]
+
+[ext_resource type="Script" path="res://skola.gd" id="1_0x1bw"]
+[ext_resource type="Texture2D" path="res://Assets/Map/School/skola_beta.png" id="2_rsnhs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujpq3"]
+size = Vector2(862, 278)
+
+[node name="skola" type="Node2D"]
+script = ExtResource("1_0x1bw")
+
+[node name="skola" type="Sprite2D" parent="."]
+position = Vector2(959, 546)
+scale = Vector2(1.61816, 1.61816)
+texture = ExtResource("2_rsnhs")
+
+[node name="skola2_exit" type="Area2D" parent="."]
+
+[node name="skolaexit" type="CollisionShape2D" parent="skola2_exit"]
+position = Vector2(1100, 983)
+shape = SubResource("RectangleShape2D_ujpq3")
+
+[connection signal="input_event" from="skola2_exit" to="." method="_on_skola_2_exit_input_event"]
