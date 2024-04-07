@@ -23,8 +23,12 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"mc": "res://mc.dch"
+}
 directories/dtl_directory={
+"Food": "res://Assets/Characters/MC/Food.dtl",
+"PlantDialog": "res://PlantDialog.dtl",
 "timeline1": "res://Assets/Dialogue/Timelines/timeline1.dtl"
 }
 glossary/default_case_sensitive=true

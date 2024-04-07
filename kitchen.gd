@@ -12,9 +12,7 @@ func _process(delta):
 
 ###STIN###
 func _on_hallway_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			get_tree().change_scene_to_file("res://chodba.tscn")
+	pass #dfdf
 
 
 func _on_hallway_mouse_entered():
@@ -28,20 +26,18 @@ func _on_hallway_mouse_exited():
 ###STIN###
 
 ###FOOD###
-
-###FOOD###
-
-
-
-
-
 func _on_food_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			Dialogic.start("res://Assets/Characters/MC/Food.dtl")
 
 
 func _on_food_mouse_entered():
-	pass # Replace with function body.
+	$foodShadow.visible = true
+	$food.modulate = Color(1.8, 1.8, 1.8)
 
 
 func _on_food_mouse_exited():
-	pass # Replace with function body.
+	$foodShadow.visible = false
+	$food.modulate = Color(1, 1, 1)
+###FOOD###

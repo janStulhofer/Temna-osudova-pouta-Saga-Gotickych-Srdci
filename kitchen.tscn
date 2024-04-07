@@ -51,3 +51,6 @@ texture = ExtResource("4_e5ej7")
 [connection signal="input_event" from="Hallway" to="." method="_on_hallway_input_event"]
 [connection signal="mouse_entered" from="Hallway" to="." method="_on_hallway_mouse_entered"]
 [connection signal="mouse_exited" from="Hallway" to="." method="_on_hallway_mouse_exited"]
+[connection signal="input_event" from="Food" to="." method="_on_food_input_event"]
+[connection signal="mouse_entered" from="Food" to="." method="_on_food_mouse_entered"]
+[connection signal="mouse_exited" from="Food" to="." method="_on_food_mouse_exited"]

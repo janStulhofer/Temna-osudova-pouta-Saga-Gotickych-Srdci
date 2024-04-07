@@ -70,7 +70,9 @@ func _on_door_1_mouse_exited():
 
 ###PLANT###
 func _on_plan_tarea_input_event(viewport, event, shape_idx):
-	pass # Prida dialog o kytce
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			Dialogic.start("res://PlantDialog.dtl")
 
 
 func _on_plan_tarea_mouse_entered():
