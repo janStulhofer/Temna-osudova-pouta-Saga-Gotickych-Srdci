@@ -24,6 +24,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"female_character": "res://Assets/Characters/Female_char/female_character.dch",
 "mc": "res://mc.dch"
 }
 directories/dtl_directory={

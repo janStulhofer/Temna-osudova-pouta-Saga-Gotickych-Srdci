@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnq7r4f5hfv02"]
+[gd_scene load_steps=6 format=3 uid="uid://dnq7r4f5hfv02"]
 
 [ext_resource type="Script" path="res://Map.gd" id="1_rhqjx"]
-[ext_resource type="Texture2D" uid="uid://47xat3e75bmf" path="res://Assets/Map/map_beta.png" id="2_1fyju"]
+[ext_resource type="Texture2D" uid="uid://8na5xlkocmk0" path="res://Assets/Map/map.png" id="2_8nl75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0rpm"]
 size = Vector2(151.841, 140.14)
@@ -9,28 +9,42 @@ size = Vector2(151.841, 140.14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ummk"]
 size = Vector2(354, 118)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_icii7"]
+radius = 68.3627
+height = 139.152
+
 [node name="Map" type="Node2D"]
 script = ExtResource("1_rhqjx")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(954, 559)
-scale = Vector2(3.0373, 2.5973)
-texture = ExtResource("2_1fyju")
 
 [node name="dum" type="Area2D" parent="."]
 position = Vector2(954, 559)
 scale = Vector2(3.0373, 2.5973)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dum"]
-position = Vector2(122.282, -111.267)
-scale = Vector2(1, 1)
+position = Vector2(-53.3368, 16.1706)
+scale = Vector2(0.32457, 0.385012)
 shape = SubResource("RectangleShape2D_h0rpm")
 
 [node name="skola" type="Area2D" parent="."]
+z_index = 1
 
 [node name="skolaa" type="CollisionShape2D" parent="skola"]
-position = Vector2(906, 384)
+position = Vector2(1388, 265)
+scale = Vector2(0.624435, 1.81872)
 shape = SubResource("RectangleShape2D_6ummk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("2_8nl75")
+
+[node name="park" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="park"]
+position = Vector2(244, 385)
+rotation = 0.785397
+scale = Vector2(2.52824, 4.55631)
+shape = SubResource("CapsuleShape2D_icii7")
 
 [connection signal="input_event" from="dum" to="." method="_on_dum_input_event"]
 [connection signal="input_event" from="skola" to="." method="_on_skola_input_event"]

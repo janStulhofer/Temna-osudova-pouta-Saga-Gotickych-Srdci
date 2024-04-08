@@ -1,23 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://e57ogf4b3rjg"]
+[gd_scene load_steps=5 format=3 uid="uid://e57ogf4b3rjg"]
 
 [ext_resource type="Script" path="res://skola.gd" id="1_0x1bw"]
-[ext_resource type="Texture2D" uid="uid://cd3prrphfvqwn" path="res://Assets/Map/School/skola_beta.png" id="2_rsnhs"]
+[ext_resource type="Texture2D" uid="uid://d3qj84edco0mf" path="res://Assets/Map/School/school.png" id="2_gjr54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ujpq3"]
 size = Vector2(862, 278)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k81bk"]
+size = Vector2(119, 275.008)
+
 [node name="skola" type="Node2D"]
 script = ExtResource("1_0x1bw")
 
-[node name="skola" type="Sprite2D" parent="."]
-position = Vector2(959, 546)
-scale = Vector2(1.61816, 1.61816)
-texture = ExtResource("2_rsnhs")
-
 [node name="skola2_exit" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(-51, 77)
+scale = Vector2(1.01507, 0.953481)
 
 [node name="skolaexit" type="CollisionShape2D" parent="skola2_exit"]
-position = Vector2(1100, 983)
+position = Vector2(1144.75, 1051.94)
+scale = Vector2(1.39404, -0.951605)
 shape = SubResource("RectangleShape2D_ujpq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_gjr54")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1075, 723)
+scale = Vector2(-4.70606, 1.46914)
+shape = SubResource("RectangleShape2D_k81bk")
 
 [connection signal="input_event" from="skola2_exit" to="." method="_on_skola_2_exit_input_event"]
