@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://e57ogf4b3rjg"]
+[gd_scene load_steps=6 format=3 uid="uid://e57ogf4b3rjg"]
 
 [ext_resource type="Script" path="res://skola.gd" id="1_0x1bw"]
 [ext_resource type="Texture2D" uid="uid://d3qj84edco0mf" path="res://Assets/Map/School/school.png" id="2_gjr54"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="3_5r6xs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ujpq3"]
 size = Vector2(862, 278)
@@ -33,4 +34,7 @@ position = Vector2(1075, 723)
 scale = Vector2(-4.70606, 1.46914)
 shape = SubResource("RectangleShape2D_k81bk")
 
+[node name="pauseMenu" parent="." instance=ExtResource("3_5r6xs")]
+
 [connection signal="input_event" from="skola2_exit" to="." method="_on_skola_2_exit_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

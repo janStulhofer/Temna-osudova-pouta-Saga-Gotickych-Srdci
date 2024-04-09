@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl4wloutyxe7x"]
+[gd_scene load_steps=9 format=3 uid="uid://bl4wloutyxe7x"]
 
 [ext_resource type="Script" path="res://bedroom.gd" id="1_8xju7"]
 [ext_resource type="Texture2D" uid="uid://1ff5ngsw7eha" path="res://Assets/Map/Home/Bedroom/bedroom.png" id="1_63rxm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://y2ja5prcyslm" path="res://Assets/Map/Home/Bedroom/bedroom_postel.png" id="3_6evfx"]
 [ext_resource type="Texture2D" uid="uid://cbd2yqe0ginu6" path="res://Assets/Map/Home/Bedroom/bedroom_vychod.png" id="4_5usgk"]
 [ext_resource type="Texture2D" uid="uid://bfdc7j1pp6arq" path="res://Assets/Map/Home/Bedroom/bedroom_PC_Shadow.png" id="4_tqhyg"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="7_c4bsa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_73w5v"]
 
@@ -67,6 +68,17 @@ position = Vector2(960, 540)
 
 [node name="kolizePostel" type="CollisionPolygon2D" parent="areaPostel"]
 polygon = PackedVector2Array(237, 14.2, 237, 15.6, 256.4, 23, 287.2, 23, 295, 24.3, 295, 25.8, 322.5, 40, 332.8, 40, 353, 37.8, 353, 39.2, 370, 41.2, 370, 42.7, 391.5, 53, 398.1, 53, 443, 58.2, 443, 59.8, 455.5, 66, 462.1, 66, 491, 70.3, 491, 71.6, 515.4, 80, 516.3, 80, 527.3, 71, 530.1, 71, 548, 73.7, 548, 73.1, 578, 70.8, 578, 72.4, 601, 77.4, 601, 79, 608.7, 85, 629.1, 85, 692.3, 93, 694.3, 93, 700.3, 88, 705.7, 88, 727.9, 85, 755.1, 85, 805, 89.2, 805, 90.8, 811.3, 93.9, 810.6, 97, 809.1, 97, 791, 123.7, 791, 127.2, 787.4, 144.6, 807, 119, 810.7, 119, 827, 112, 827, 115.1, 863, 147.1, 863, 149.3, 888, 181.3, 888, 190, 886.7, 190, 882.7, 216, 880.8, 216, 877.5, 219.4, 875, 218.3, 875, 216, 869.5, 192, 835.4, 171, 829.8, 171, 810.6, 167, 778, 167, 758, 167.9, 731, 182.2, 731, 182.8, 707.9, 209, 705.6, 209, 690, 220, 690, 221.6, 677.9, 238.7, 709.9, 217.7, 712, 218.8, 712, 219.5, 766, 234.5, 766, 236.1, 799.4, 265.4, 798.4, 268, 796.1, 268, 763, 276.6, 763, 274.7, 714.6, 267.3, 658, 311, 658, 314, 660.5, 324.8, 707, 310.3, 707, 312.6, 760, 331.6, 760, 333.1, 804, 369.1, 804, 371.6, 809.5, 398, 806.8, 398, 788.5, 416.4, 786, 415.3, 786, 414.3, 709.1, 376.8, 662, 409, 662, 409.9, 637.8, 432, 635.3, 432, 594.3, 446, 585.9, 446, 500, 435.3, 500, 442, 498, 526, 496.7, 526, 494.7, 539, 490.7, 539, -7.09998, 405, -11.3, 405, -222.1, 351, -225.1, 351, -226.1, 371, -228, 371, -231.3, 375.4, -234, 374.4, -234, 373.3, -251.3, 366, -253.5, 366, -258, 368.2, -258, 365.1, -270, 357.1, -270, 353.9, -265.1, 350.7, -263, 351.8, -263, 352.6, -259, 354.1, -259, 348, -260.9, 320, -262, 320, -262, 315, -278, 294.7, -278, 288.3, -271, 279.3, -271, 276.7, -261.5, 245, -260, 245, -242, 220, -240.7, 220, -192.8, 177, -190.7, 177, -159.7, 154, -157.5, 154, -141, 144.9, -141, 144, -123.7, 130, -121.5, 130, -98, 118.7, -98, 118.1, -83.7, 106, -81.4, 106, -68, 99.8, -68, 99.1, -49.7, 84, -47.6, 84, -27.5, 73, -24.3, 73, -5, 66.6, -0.200012, 58, 2.20001, 58, 13.2, 48, 15.5, 48, 30.5, 40, 36.6, 40, 45, 38.3, 73.4, 19, 76.7, 19, 113.6, 3, 117.9, 3, 133, 2.09998, 133, 0.700012)
+
+[node name="pauseMenu" parent="." instance=ExtResource("7_c4bsa")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+mouse_default_cursor_shape = 3
 
 [connection signal="input_event" from="Exit" to="." method="_on_exit_input_event"]
 [connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]

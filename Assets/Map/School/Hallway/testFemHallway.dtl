@@ -1,0 +1,9 @@
+[wait time="1.0"]
+join female_character 1
+[wait time="1.0"]
+female_character (female_char): Ahoj jak se mas?
+[wait time="1.0"]
+join mc 3
+[wait time="1.0"]
+mc (mc): Dobre
+[wait time="1.0"]

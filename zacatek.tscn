@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnrngv80csawf"]
+[gd_scene load_steps=3 format=3 uid="uid://dnrngv80csawf"]
 
 [ext_resource type="Texture2D" uid="uid://dsv81gwh3hmdj" path="res://Assets/Menu/menuBG.png" id="1_d1qck"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="2_76p8x"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,3 +10,5 @@
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(960, 540)
 texture = ExtResource("1_d1qck")
+
+[node name="pauseMenu" parent="." instance=ExtResource("2_76p8x")]

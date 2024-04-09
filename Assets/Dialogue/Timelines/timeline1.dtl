@@ -1,5 +1,16 @@
-join  1
-Jak se jmenuješ?
-[text_input text="Jmenuji se:" var="jmeno" placeholder="Zadej svoje jméno..."]
-set 
-<Empty Text Event>
+[wait time="1.0"]
+KAPITOLA 1\: první pocity
+[wait time="1.0"]
+Odehrávalo se 12. května roku 2017 
+[wait time="1.0"]
+Jmenuji se Haruki Tanaka, je mi 17 let a nikdy jsem nepocítil lásku dívčího srdce…. a toto je můj příběh….
+[wait time="1.0"]
+7\:03 AM 	*zvuky zpívajících ptáčků*
+Bylo překrásné slunečné ráno….
+Vzbudil mě hlasitý zpěv ptáků, rozevřel jsem své ospalky zalepené oči… a v ten moment jsem věděl, co mě tento osudový den čeká…
+Byla to má první prožitá noc v Hakoně, v městečku, kam jsem se s rodiči přestěhoval… prý tu otec sehnal nějaký dobrý kšeft nebo co…. 
+Sebral jsem veškerou svou energii a vstal z postele, rozespalý jsem se dokulhal k oknu. 
+[background arg="res://Assets/Map/Home/Bedroom/bedroom.png" fade="3.0"]
+Zaostřil jsem svůj rozmazaný zrak a upřel ho na městečko, můj výhled byl překrásný… „ovanul mě jarní vánek s vůní rozkvétajících třešní…“
+join mc 1 [animation="Bounce In" length="0.9" wait="true"]
+mc (mc): Zhluboka jsem se nadechl…. „Tak tohle je tedy můj nový život…“

@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://mblco5glx26w"]
+
+[ext_resource type="Script" path="res://hallwaySchool.gd" id="1_2rnjq"]
+[ext_resource type="Texture2D" uid="uid://dj6bcdpom36a6" path="res://Assets/Map/School/Hallway/Hallway.png" id="1_rxe30"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="2_puxd1"]
+[ext_resource type="Texture2D" uid="uid://dc4bgygtkqlij" path="res://Assets/Characters/Female_char/female_char.png" id="3_hefoi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3qmi"]
+size = Vector2(1652, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h37wn"]
+size = Vector2(248, 318)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ob7j"]
+radius = 40.8571
+height = 260.0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2rnjq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_rxe30")
+
+[node name="exit" type="Area2D" parent="."]
+
+[node name="exitCol" type="CollisionShape2D" parent="exit"]
+position = Vector2(1134, 990)
+shape = SubResource("RectangleShape2D_i3qmi")
+
+[node name="class" type="Area2D" parent="."]
+
+[node name="classCol" type="CollisionShape2D" parent="class"]
+position = Vector2(1328, 487)
+shape = SubResource("RectangleShape2D_h37wn")
+
+[node name="pauseMenu" parent="." instance=ExtResource("2_puxd1")]
+
+[node name="fem" type="Area2D" parent="."]
+position = Vector2(50, 114)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fem"]
+z_index = 1
+position = Vector2(293, 487)
+scale = Vector2(-5.09091, -3.2)
+shape = SubResource("CapsuleShape2D_5ob7j")
+
+[node name="femaleChar" type="Sprite2D" parent="."]
+position = Vector2(340, 696)
+texture = ExtResource("3_hefoi")
+
+[connection signal="input_event" from="exit" to="." method="_on_exit_input_event"]
+[connection signal="input_event" from="fem" to="." method="_on_fem_input_event"]

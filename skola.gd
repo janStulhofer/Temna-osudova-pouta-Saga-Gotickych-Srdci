@@ -18,8 +18,10 @@ func _on_skola_2_exit_input_event(viewport, event, shape_idx):
 ###exit###
 
 ###enter###
-
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			get_tree().change_scene_to_file("res://hallwaySchool.tscn")
 ###enter###
 
-func _on_area_2d_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
+

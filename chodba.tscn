@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bntwfuj13qk8y"]
+[gd_scene load_steps=16 format=3 uid="uid://bntwfuj13qk8y"]
 
 [ext_resource type="Script" path="res://Chodba.gd" id="1_k4nqo"]
 [ext_resource type="Texture2D" uid="uid://boc70uiqs5j3i" path="res://Assets/Map/Home/Hallway/hallway.png" id="2_ionti"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cehni4gbujeq2" path="res://Assets/Map/Home/Hallway/hallway_door1.png" id="8_w0q61"]
 [ext_resource type="Texture2D" uid="uid://di84sx0qaxl5r" path="res://Assets/Map/Home/Hallway/hallway_plant.png" id="9_tc8fv"]
 [ext_resource type="Texture2D" uid="uid://rosf3alo2t4f" path="res://Assets/Map/Home/Hallway/hallway_plant_shadow.png" id="10_nd0bp"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="11_y8k0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf8bg"]
 size = Vector2(147, 563.5)
@@ -69,6 +70,7 @@ position = Vector2(1337, 756)
 shape = SubResource("CircleShape2D_k30oa")
 
 [node name="Door1" type="Area2D" parent="."]
+z_index = 2
 
 [node name="door111" type="CollisionShape2D" parent="Door1"]
 position = Vector2(753.25, 581.25)
@@ -86,6 +88,7 @@ position = Vector2(960, 540)
 texture = ExtResource("8_w0q61")
 
 [node name="PLANTarea" type="Area2D" parent="."]
+z_index = 2
 
 [node name="plantCol" type="CollisionShape2D" parent="PLANTarea"]
 position = Vector2(1121, 685)
@@ -101,6 +104,9 @@ visible = false
 modulate = Color(1, 1, 1, 0.454902)
 position = Vector2(960, 540)
 texture = ExtResource("10_nd0bp")
+
+[node name="pauseMenu" parent="." instance=ExtResource("11_y8k0g")]
+z_index = 2
 
 [connection signal="input_event" from="Pokoj" to="." method="_on_pokoj_input_event"]
 [connection signal="mouse_entered" from="Pokoj" to="." method="_on_pokoj_mouse_entered"]

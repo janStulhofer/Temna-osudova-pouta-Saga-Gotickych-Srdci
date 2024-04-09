@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cweb37xoqlj1f"]
+[gd_scene load_steps=9 format=3 uid="uid://cweb37xoqlj1f"]
 
 [ext_resource type="Script" path="res://kitchen.gd" id="1_35im4"]
 [ext_resource type="Texture2D" uid="uid://6h8tfk7j7oir" path="res://Assets/Map/Home/Kitchen/kitchen.png" id="1_u6gp2"]
 [ext_resource type="Texture2D" uid="uid://dhg3sdw5a3tai" path="res://Assets/Map/Home/Kitchen/kitchen_shadow.png" id="3_rpyss"]
 [ext_resource type="Texture2D" uid="uid://dd1db72vwabjv" path="res://Assets/Map/Home/Kitchen/food.png" id="4_6omcp"]
 [ext_resource type="Texture2D" uid="uid://cfljrbb8dob02" path="res://Assets/Map/Home/Kitchen/food_shadow.png" id="4_e5ej7"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="6_whfvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ain70"]
 size = Vector2(689, 140.75)
@@ -32,6 +33,7 @@ position = Vector2(833.5, 946.375)
 shape = SubResource("RectangleShape2D_ain70")
 
 [node name="Food" type="Area2D" parent="."]
+z_index = 2
 position = Vector2(0, 1)
 
 [node name="foodCol" type="CollisionShape2D" parent="Food"]
@@ -47,6 +49,9 @@ texture = ExtResource("4_6omcp")
 visible = false
 position = Vector2(960, 540)
 texture = ExtResource("4_e5ej7")
+
+[node name="pauseMenu" parent="." instance=ExtResource("6_whfvc")]
+z_index = 3
 
 [connection signal="input_event" from="Hallway" to="." method="_on_hallway_input_event"]
 [connection signal="mouse_entered" from="Hallway" to="." method="_on_hallway_mouse_entered"]
