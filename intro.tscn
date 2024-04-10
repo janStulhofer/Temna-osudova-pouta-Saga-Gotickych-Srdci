@@ -7,8 +7,11 @@
 script = ExtResource("1_w7nyb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1935.0
-offset_bottom = 1098.0
+offset_left = -113.0
+offset_top = -181.0
+offset_right = 1822.0
+offset_bottom = 917.0
+scale = Vector2(1.12, 1.40437)
 color = Color(0, 0, 0, 1)
 
 [node name="pauseMenu" parent="." instance=ExtResource("2_mdxvd")]

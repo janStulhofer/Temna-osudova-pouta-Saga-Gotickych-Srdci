@@ -37,7 +37,8 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://ui_dialogu.tres"]
 layout/default_style="res://ui_dialogu.tres"
 variables={
-"jmeno": ""
+"jmeno": "",
+"rspoint": 0
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

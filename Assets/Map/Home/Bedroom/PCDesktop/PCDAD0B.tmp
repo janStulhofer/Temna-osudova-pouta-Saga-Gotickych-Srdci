@@ -112,14 +112,14 @@ offset_bottom = 255.0
 scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 
-[node name="clsAr2" type="Area2D" parent="."]
+[node name="clsAr2" type="Area2D" parent="CanvasLayer"]
 z_index = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="clsAr2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/clsAr2"]
 z_index = 1
 position = Vector2(1148, 465)
 shape = SubResource("CircleShape2D_d1amo")
 
 [connection signal="input_event" from="PCDesktop/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="StatusAr" to="." method="_on_status_ar_input_event"]
-[connection signal="input_event" from="clsAr2" to="." method="_on_cls_ar_2_input_event"]
+[connection signal="input_event" from="CanvasLayer/clsAr2" to="." method="_on_cls_ar_2_input_event"]

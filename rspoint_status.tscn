@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2wxs4pf8kpki"]
+
+[ext_resource type="Texture2D" uid="uid://l0d65a46h6sw" path="res://Assets/Menu/_ZbuttonTrr.png" id="1_40yvn"]
+[ext_resource type="Script" path="res://rspoint_status.gd" id="1_yxds5"]
+[ext_resource type="Texture2D" uid="uid://c80x8gio8anui" path="res://Assets/Map/Home/Bedroom/PCDesktop/Heart.png" id="2_shsdx"]
+[ext_resource type="Texture2D" uid="uid://dyu3ajo6vkkop" path="res://Assets/Menu/_close.png" id="3_gjgs8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ar8qi"]
+radius = 88.0568
+
+[node name="rspointStatus" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_yxds5")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Container"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Container"]
+position = Vector2(-960, -540)
+texture = ExtResource("1_40yvn")
+
+[node name="Label" type="Label" parent="Container/Sprite2D"]
+offset_left = -170.0
+offset_top = -57.0
+offset_right = 179.0
+offset_bottom = 53.0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 80
+text = "100 / 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Container"]
+position = Vector2(-1296, -535)
+scale = Vector2(0.158242, 0.158242)
+texture = ExtResource("2_shsdx")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Container"]
+position = Vector2(-572, -656)
+scale = Vector2(0.717468, 0.717468)
+texture = ExtResource("3_gjgs8")
+
+[node name="clsAr" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clsAr"]
+position = Vector2(1350, 422)
+shape = SubResource("CircleShape2D_ar8qi")
+
+[connection signal="input_event" from="clsAr" to="." method="_on_cls_ar_input_event"]
