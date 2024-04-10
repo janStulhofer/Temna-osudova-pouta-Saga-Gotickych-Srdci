@@ -1,0 +1,62 @@
+[wait time="0.5"]
+mc: Ve stínech knihovních regálů tančily paprsky slunečního světla, bylo to perfektní…. Začal jsem malovat…
+mc: Netrvalo dlouho, moje myšlenky narušil zvuk hlasitých kroků, který se blížil od vstupu do knihovny.
+mc: Zvedl jsem zrak a zahlédl postavu, jak se pomalu blíží ke mně.
+[wait time="0.5"]
+mc: Byla to ona……….
+[wait time="0.5"]
+mc: Beze slova se posadila naproti mně, její chladný pohled se zaryl do mých očí jako skalpel do měkkého masa…  byl jsem zaskočený…
+join mc 3
+join female_character 1 [animation="Bounce In" length="1"]
+female_character (female_char): Co to děláš?
+Její hlas zněl ostře, s nádechem nadřazenosti
+- Ehmm…jen si maluju.. nic zajímavého… [if {} == ""]
+	*Začervenal jsem se*
+	set {rspoint} += 5
+- Eh… co tě to zajíma?
+	set {rspoint} -= 1
+female_character (female_char): Ona\: „Meeeeh… jdu jen tak kolem a vidím tu tebe. Ty se moc s lidma nebavíš co? Natož s holkama, Meheheh >\:3“ ušklíbla se zlomyslně.
+*Srdce mi začalo rychle bušet*
+*CO TA HOLKA ODE MĚ SAKRA CHCE?…*
+- JA SE S LIDMA BAVÍM! I no… s holkama…
+	set {rspoint} += 5
+- NEOTRAVUJ MĚ
+	set {rspoint} -= 1
+female_character (female_char): HAHAHAH! Jediná holka se kterou jsi se kdy bavil byla tvoje máma co? HAHAHA! Vidím jak se červenáš hlupáčku >\:3
+*nervozitou strčím do svého batohu a vypadnou z něj před ní papíry s mangou*
+*SAKRA! Prosím ať se na ně nepodívá! PROSÍÍÍÍM!....*
+*Vzala pár papírů do ruky a v očích jí byl vidět plamen úžasu*
+female_character (female_char): CO TO JAKO MÁ BEJT? PRINC? TY? A ZACHRAŇUJE PRINCEZNU? PŘED ŠTRAŠLIVOU NESTVŮROU???? HAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
+- (nervozní) Hmm….
+- (nervozní) Hmm….
+[wait time="0.5"]
+*Po 10 minutách hysterického smíchu*
+[wait time="0.5"]
+set {jmeno_holka} = "Nanami Mykaziyva"
+female_character: haha… huhuuhu… ty jsi mi ale vtipálek haha… Jmenuju se Nanami… Nanami Mykaziyva. Ty jsi Haruki že jo?
+- Jo jsem…. těší mě Nanami….
+	set {rspoint} += 5
+- Ne.
+	set {rspoint} -= 1
+female_character: Ahhh no dobrá Haruki… jsem ráda že člověk jako ty sedí ve třídě přede mnou, užijeme si spolu ještě dost zábavy >\:3
+- JAK JAKO DOST ZÁBAVY? JAK TO MYSLÍŠ?
+	set {rspoint} += 5
+- S tebou žádnou zábavu zažít nechci…
+	set {rspoint} -= 1
+female_character (female_char): Mehehe ještě uvidíš >\:3 no nic Haruki, už musím letět meheheheh >\:33 
+- Ahhh měj se, ahoj zítra….
+	set {rspoint} += 5
+- Hmmm…. *znechucenost*
+	set {rspoint} -= 1
+if {rspoint} >= 15:
+	*Při odchodu mi podala mé papíry, zlomyslně se pousmála  a něžně rychle pohladila moji ruku * 
+	*Pot mi tekl jako vodopád, srdce mi bušilo jako o závod. Poté jsem cítil jak je má hlava těžká a omdlel jsem*
+	*Vzbudila mě uklízečka že se tady nespí a prej musím už domů. Bylo 5 hodin odpoledne*
+else:
+	*Při odchodu mi podala mé papíry, zlomyslně se pousmála  a odešla*
+	*Zkontroloval jsem svoje papíry s mangou, zda nejsou nějak poškozené*
+	*jsou v pohodě uffff ještě že tak…*
+	*Už je celkem dost hodin, měl bych jít domů aby mě mamka nehledala* 
+[wait time="1.5"]
+KONEC PRVNÍ KAPITOLY
+Díky, že jste si zahráli naši hru

@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbs0ret4mes3w"]
+
+[ext_resource type="Texture2D" uid="uid://l0d65a46h6sw" path="res://Assets/Menu/_ZbuttonTrr.png" id="1_ghu5p"]
+[ext_resource type="Script" path="res://quest_guide.gd" id="1_ls4hb"]
+[ext_resource type="Texture2D" uid="uid://dyu3ajo6vkkop" path="res://Assets/Menu/_close.png" id="2_qhe1e"]
+
+[node name="questGuide" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ls4hb")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Container"]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="Sprite2D1" type="Sprite2D" parent="Container/CanvasLayer"]
+visible = false
+position = Vector2(1916, 1046)
+texture = ExtResource("1_ghu5p")
+
+[node name="Label" type="Label" parent="Container/CanvasLayer/Sprite2D1"]
+visible = false
+offset_left = -359.0
+offset_top = -101.0
+offset_right = 258.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 50
+text = "Běž ke škole"
+
+[node name="Label2" type="Label" parent="Container/CanvasLayer/Sprite2D1"]
+visible = false
+offset_left = -359.0
+offset_top = -101.0
+offset_right = 258.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 50
+text = "Běž do školy"
+
+[node name="Label3" type="Label" parent="Container/CanvasLayer/Sprite2D1"]
+visible = false
+offset_left = -359.0
+offset_top = -101.0
+offset_right = 258.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 50
+text = "Běž do knihovny"
+
+[node name="Label4" type="Label" parent="Container/CanvasLayer/Sprite2D1"]
+visible = false
+offset_left = -359.0
+offset_top = -101.0
+offset_right = 258.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 50
+text = "Splnil jsi všechny úkoly,
+další obsah v příštím updatu"
+
+[node name="Sprite2D" type="Sprite2D" parent="Container/CanvasLayer/Sprite2D1"]
+position = Vector2(367, -103)
+scale = Vector2(0.799344, 0.799344)
+texture = ExtResource("2_qhe1e")

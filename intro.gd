@@ -10,7 +10,7 @@ func _ready():
 
 func ended():
 	Dialogic.timeline_ended.disconnect(ended)
-	print(Dialogic.VAR.jmeno)
-	var jmeno = Dialogic.VAR.jmeno
+	#print(Dialogic.VAR.jmeno)
+	#var jmeno = Dialogic.VAR.jmeno
 	SceneTransition.change_scene("res://bedroom.tscn", "Dissolve", "Back")
 

@@ -1,0 +1,131 @@
+[gd_scene load_steps=14 format=3 uid="uid://elffu188mmf8"]
+
+[ext_resource type="Script" path="res://Assets/Map/Home/Bedroom/PCDesktop/PCDesktop.gd" id="1_nb1ji"]
+[ext_resource type="Texture2D" uid="uid://d2rg64h2hfn3l" path="res://Assets/Map/Home/Bedroom/PCDesktop/PCDesktop.png" id="1_ytc3w"]
+[ext_resource type="PackedScene" uid="uid://bn2sgyeymf8x" path="res://pause_menu.tscn" id="3_aqksq"]
+[ext_resource type="Texture2D" uid="uid://cbvvmto8ef7vc" path="res://Assets/Map/Home/Bedroom/PCDesktop/Floppy.png" id="4_m2y1j"]
+[ext_resource type="Texture2D" uid="uid://78yjf2uw0p8m" path="res://Assets/Map/Home/Bedroom/PCDesktop/female_char_icon.png" id="5_6yary"]
+[ext_resource type="Texture2D" uid="uid://dk37crokbxcdp" path="res://Assets/Map/Home/Bedroom/PCDesktop/scrollQuest.png" id="6_51io2"]
+[ext_resource type="PackedScene" uid="uid://b2wxs4pf8kpki" path="res://rspoint_status.tscn" id="7_8w011"]
+[ext_resource type="PackedScene" uid="uid://bbs0ret4mes3w" path="res://quest_guide.tscn" id="8_j10f7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_75xsi"]
+radius = 36.0139
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ye56x"]
+size = Vector2(98, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbt82"]
+size = Vector2(87, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlrmy"]
+size = Vector2(86, 111.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d1amo"]
+radius = 47.5184
+
+[node name="PcDesktop" type="Node2D"]
+script = ExtResource("1_nb1ji")
+
+[node name="PCDesktop" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_ytc3w")
+
+[node name="Area2D" type="Area2D" parent="PCDesktop"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PCDesktop/Area2D"]
+position = Vector2(-919, 502)
+shape = SubResource("CircleShape2D_75xsi")
+
+[node name="pauseMenu" parent="." instance=ExtResource("3_aqksq")]
+
+[node name="Save" type="Sprite2D" parent="."]
+position = Vector2(95, 97)
+scale = Vector2(0.0564208, 0.0564208)
+texture = ExtResource("4_m2y1j")
+
+[node name="SaveLabel" type="Label" parent="."]
+offset_left = 51.0
+offset_top = 139.0
+offset_right = 146.0
+offset_bottom = 167.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "Uložit hru"
+
+[node name="Status" type="Sprite2D" parent="."]
+position = Vector2(95, 237)
+scale = Vector2(0.297204, 0.297204)
+texture = ExtResource("5_6yary")
+
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 280.0
+offset_right = 140.0
+offset_bottom = 308.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "Status"
+
+[node name="Quest" type="Sprite2D" parent="."]
+position = Vector2(94, 364)
+scale = Vector2(0.070881, 0.070881)
+texture = ExtResource("6_51io2")
+
+[node name="QuestLabel" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 406.0
+offset_right = 122.0
+offset_bottom = 434.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "Quest"
+
+[node name="SaveAr" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SaveAr"]
+position = Vector2(97, 110)
+shape = SubResource("RectangleShape2D_ye56x")
+
+[node name="StatusAr" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StatusAr"]
+position = Vector2(95.5, 252)
+shape = SubResource("RectangleShape2D_kbt82")
+
+[node name="QuestAr" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestAr"]
+position = Vector2(96, 380.25)
+shape = SubResource("RectangleShape2D_nlrmy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="rspointStatus" parent="CanvasLayer" instance=ExtResource("7_8w011")]
+visible = false
+offset_left = 472.0
+offset_top = 255.0
+offset_right = 472.0
+offset_bottom = 255.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="questGuide" parent="CanvasLayer" instance=ExtResource("8_j10f7")]
+visible = false
+mouse_filter = 2
+
+[node name="clsAr2" type="Area2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clsAr2"]
+z_index = 1
+position = Vector2(1148, 465)
+shape = SubResource("CircleShape2D_d1amo")
+
+[connection signal="input_event" from="PCDesktop/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="StatusAr" to="." method="_on_status_ar_input_event"]
+[connection signal="input_event" from="QuestAr" to="." method="_on_quest_ar_input_event"]
+[connection signal="input_event" from="clsAr2" to="." method="_on_cls_ar_2_input_event"]

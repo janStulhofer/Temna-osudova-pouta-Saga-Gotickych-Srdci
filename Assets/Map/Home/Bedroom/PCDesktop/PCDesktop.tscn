@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://elffu188mmf8"]
+[gd_scene load_steps=14 format=3 uid="uid://elffu188mmf8"]
 
 [ext_resource type="Script" path="res://Assets/Map/Home/Bedroom/PCDesktop/PCDesktop.gd" id="1_nb1ji"]
 [ext_resource type="Texture2D" uid="uid://d2rg64h2hfn3l" path="res://Assets/Map/Home/Bedroom/PCDesktop/PCDesktop.png" id="1_ytc3w"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://78yjf2uw0p8m" path="res://Assets/Map/Home/Bedroom/PCDesktop/female_char_icon.png" id="5_6yary"]
 [ext_resource type="Texture2D" uid="uid://dk37crokbxcdp" path="res://Assets/Map/Home/Bedroom/PCDesktop/scrollQuest.png" id="6_51io2"]
 [ext_resource type="PackedScene" uid="uid://b2wxs4pf8kpki" path="res://rspoint_status.tscn" id="7_8w011"]
+[ext_resource type="PackedScene" uid="uid://bbs0ret4mes3w" path="res://quest_guide.tscn" id="8_j10f7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_75xsi"]
 radius = 36.0139
@@ -112,6 +113,10 @@ offset_bottom = 255.0
 scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 
+[node name="questGuide" parent="CanvasLayer" instance=ExtResource("8_j10f7")]
+visible = false
+mouse_filter = 2
+
 [node name="clsAr2" type="Area2D" parent="."]
 z_index = 1
 
@@ -122,4 +127,5 @@ shape = SubResource("CircleShape2D_d1amo")
 
 [connection signal="input_event" from="PCDesktop/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="StatusAr" to="." method="_on_status_ar_input_event"]
+[connection signal="input_event" from="QuestAr" to="." method="_on_quest_ar_input_event"]
 [connection signal="input_event" from="clsAr2" to="." method="_on_cls_ar_2_input_event"]

@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Temna-osudova-pouta-saga-gotickych-srdci"
+config/name="TOPsgs"
 run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/Other/436804868_933291174946189_1276401722675363300_n.png"
+boot_splash/fullsize=false
+config/icon="res://Assets/Other/436804868_933291174946189_1276401722675363300_n.png"
 
 [autoload]
 
@@ -30,6 +32,9 @@ directories/dch_directory={
 directories/dtl_directory={
 "Food": "res://Assets/Characters/MC/Food.dtl",
 "PlantDialog": "res://PlantDialog.dtl",
+"knihovnaDialog": "res://Assets/Map/School/knihovnaDialog.dtl",
+"skolaFirst": "res://skolaFirst.dtl",
+"skolaInsideFirst": "res://Assets/Map/School/skolaInsideFirst.dtl",
 "testFemHallway": "res://Assets/Map/School/Hallway/testFemHallway.dtl",
 "timeline1": "res://Assets/Dialogue/Timelines/timeline1.dtl"
 }
@@ -37,7 +42,8 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://ui_dialogu.tres"]
 layout/default_style="res://ui_dialogu.tres"
 variables={
-"jmeno": "",
+"iQuest": 0,
+"jmeno_holka": "Neznámá spolužačka",
 "rspoint": 0
 }
 text/letter_speed=0.01
@@ -93,3 +99,4 @@ esc={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

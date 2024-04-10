@@ -1,0 +1,13 @@
+[background arg="res://Assets/Map/School/blackScreen.png" fade="1.0"]
+[wait time="1.0"]
+mc: Upocený jsem otevřel dveře od své třídy, a seděla tam.
+mc: Holka menšího vzrůstu, tmavé krásné dlouhé vlasy, její úsměv byl jako kdyby mi srdce prostřelil amorův šíp. 
+mc: Právě se něčemu smála s kamarádkama, než se její pohled obrátil ke mně.
+mc: Učitel mě představil nové třídě a moje lavice byla přímo před tou danou dívkou.
+mc: Po cestě k lavici jsem si všiml jejího zlomyslného úšklebu.
+[wait time="0.5"]
+1\:45 PM
+[wait time="0.5"]
+join mc 1 [animation="Slide In Left" length="1"]
+mc (mc): První den v nové třídě proběhl v pohodě, byl jsem rád že mě spolužáci přijmuli takhle rychle… jen mi v hlavě vrtala furt ta holka, byla jediná, která se mi nepředstavila…
+mc (mc): Ještě si zajdu do školní knihovny, tam je aspoň klídek a budu si tam moc vytvářet moji mangu…
